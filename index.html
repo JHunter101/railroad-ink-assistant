@@ -5,6 +5,7 @@
       <link rel="stylesheet" type="text/css" href="css/style.css">
 	  <link rel="stylesheet" href="css/pico.min.css">
       <script src="js/script.js"></script>
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
    <body>
    
@@ -13,14 +14,15 @@
    
   <section id="buttons" class = "section">
     <div class="button-container">
-         <a href="#buttons" class="btn btn-primary roll-dice" onclick="rollDice(); hide_elem('options'); unhide_elem('results');">Roll Dice</button> </a>
-		 <a href="#buttons" class="btn btn-primary reset" onclick="clearBox('container'); hide_elem('results'); unhide_elem('options');">Reset</button> </a>
+         <a href="#air" class="btn btn-primary roll-dice" onclick="rollDice(); hide_elem('options'); unhide_elem('results');">Roll Dice</button> </a>
+		 <a href="#air" class="btn btn-primary reset" onclick="clearBox('resCon'); hide_elem('results'); unhide_elem('options');">Reset</button> </a>
     </div>
   </section>
    
   <section id="options" class = "section">
     <div class="options-container wow fadeIn">
-      <h1>Railroad Ink Assistant - By Jack Chen</h1>
+      <h1>Railroad Ink Assistant</h1>
+      <h2>By Jack Chen</h3>
       <form>
          <label>Select main setting:</label>
          <select id="main-setting">
@@ -98,8 +100,7 @@
   </section>
   
   <section id="results" class = "section hidden">
-    <div class="results-container wow fadeIn">
-      <div id="container"></div>
+    <div id="resCon" class = wow fadeIn">
     </div>
   </section>
 

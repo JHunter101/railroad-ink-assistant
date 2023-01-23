@@ -5,7 +5,8 @@ var dicePool = {
 			"Classic/images/classic_defaultA_",
 			"Classic/images/classic_defaultB_"
 		],
-		rounds: 7
+		effective_dice: 4,
+		board_size: 39 // 49
 	},
 	challenge: {
 		dice: ["Classic/images/classic_defaultA_",
@@ -13,7 +14,8 @@ var dicePool = {
 			"Challenge/images/challenge_defaultA_",
 			"Challenge/images/challenge_defaultB_"
 		],
-		rounds: 7
+		effective_dice: 5,
+		board_size: 47 // 49
 	},
 	giant: {
 		dice: ["Classic/images/classic_defaultA_",
@@ -21,7 +23,8 @@ var dicePool = {
 			"Challenge/images/challenge_defaultA_",
 			"Challenge/images/challenge_defaultB_"
 		],
-		rounds: 12
+		effective_dice: 5,
+		board_size: 77 // 81
 	},
 	epic: {
 		dice: ["Classic/images/classic_defaultA_",
@@ -31,168 +34,155 @@ var dicePool = {
 			"Classic/images/classic_defaultA_",
 			"Classic/images/classic_defaultA_"
 		],
-		rounds: 10
+		effective_dice: 7,
+		board_size: 87 // 121
 	}
 };
+
 var expansions = {
 	"none": {
 		dice: [],
-		rounds: 0
+		effective_dice: 0.5
 	},
 	"airline": {
 		dice: ["Sky/images/sky_airportA_",
 			"Sky/images/sky_airportB_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"alien-farmer": {
-		dice: ["Future/images/future_alienFarmerA_",
-			"Future/images/future_alienFarmerA_"
+		dice: ["Future/images/future_alienFarmerA_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"canyon": {
 		dice: ["Yellow/images/yellow_canyonA_",
 			"Yellow/images/yellow_canyonA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"city-builder": {
 		dice: ["Future/images/future_citybuilderA_",
 			"Future/images/future_citybuilderB_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"construction": {
-		dice: ["Engineer/images/engineer_constructionA_",
-			"Engineer/images/engineer_constructionA_"
+		dice: ["Engineer/images/engineer_constructionA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"desert": {
 		dice: ["Yellow/images/yellow_desertA_",
 			"Yellow/images/yellow_desertB_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"forest": {
 		dice: ["Green/images/green_forestA_",
 			"Green/images/green_forestA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"galactic-invaders": {
-		dice: ["Arcade/images/arcade_galacticInvaderA_",
-			"Arcade/images/arcade_galacticInvaderA_"
+		dice: ["Arcade/images/arcade_galacticInvaderA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"investigation": {
-		dice: ["Cthulu/images/cthulu_investigationA_",
-			"Cthulu/images/cthulu_investigationA_"
-		],
-		rounds: -1
+		dice: ["Cthulu/images/cthulu_investigationA_"],
+		effective_dice: 1
 	},
 	"lake": {
 		dice: ["Blue/images/blue_lakeA_",
 			"Blue/images/blue_lakeA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"lava": {
 		dice: ["Red/images/red_lavaA_",
 			"Red/images/red_lavaA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"meteor": {
 		dice: ["Red/images/red_meteorA_",
 			"Red/images/red_meteorB_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"pluck-man": {
-		dice: ["Arcade/images/arcade_plucManA_",
-				"Arcade/images/arcade_plucManA_"
+		dice: ["Arcade/images/arcade_plucManA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"portal": {
-		dice: ["Cthulu/images/cthulu_portalA_",
-			"Cthulu/images/cthulu_portalA_"
+		dice: ["Cthulu/images/cthulu_portalA_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"power-grid": {
 		dice: ["Electricity/images/electricity_powergridA_",
 			"Electricity/images/electricity_powergridA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"rainbow": {
-		dice: ["Arcade/images/arcade_rainbowA_", 
-		"Arcade/images/arcade_rainbowA_"],
-		rounds: -1
+		dice: ["Arcade/images/arcade_rainbowA_"],
+		effective_dice: 1
 	},
 	"renovation": {
 		dice: ["Engineer/images/engineer_renovationA_",
 			"Engineer/images/engineer_renovationA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"ritual": {
-		dice: ["Cthulu/images/cthulu_ritualA_",
-			"Cthulu/images/cthulu_ritualA_"
-		],
-		rounds: -1
+		dice: ["Cthulu/images/cthulu_ritualA_"],
+		effective_dice: 1
 	},
 	"river": {
 		dice: ["Blue/images/blue_riverA_",
 			"Blue/images/blue_riverA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"separation": {
-		dice: ["Engineer/images/engineer_separationA_",
-			"Engineer/images/engineer_separationA_"
+		dice: ["Engineer/images/engineer_separationA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"special": {
-		dice: ["Engineer/images/engineer_specialA_",
-			"Engineer/images/engineer_specialA_"
+		dice: ["Engineer/images/engineer_specialA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"street-lamps": {
 		dice: ["Electricity/images/electricity_streetLampsA_",
 			"Electricity/images/electricity_streetLampsA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"superconnection": {
-		dice: ["Future/images/future_superconnectionA_",
-			"Future/images/future_superconnectionA_"
+		dice: ["Future/images/future_superconnectionA_"
 		],
-		rounds: -1
+		effective_dice: 1
 	},
 	"tentacle": {
-		dice: ["Cthulu/images/cthulu_tentacleA_",
-			"Cthulu/images/cthulu_tentacleA_"
+		dice: ["Cthulu/images/cthulu_tentacleA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"tetromino": {
-		dice: ["Arcade/images/arcade_tetrominoA_",
-			"Arcade/images/arcade_tetrominoA_"
+		dice: ["Arcade/images/arcade_tetrominoA_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"trail": {
 		dice: ["Green/images/green_trailA_",
 			"Green/images/green_trailA_"
 		],
-		rounds: -1
+		effective_dice: 2
 	},
 	"underground": {
 		dice: ["Underground/images/underground_defaultA_",
@@ -200,17 +190,17 @@ var expansions = {
 			"Underground/images/underground_defaultC_",
 			"Underground/images/underground_defaultD_"
 		],
-		rounds: -1
+		effective_dice: 0
 	},
 	"weather": {
 		dice: ["Sky/images/sky_weatherA_",
 			"Sky/images/sky_weatherB_"
 		],
-		rounds: -1
+		effective_dice: 0
 	}
 };
 
-var currentRound = 0;
+var currentRound = 1;
 
 function rollDice() {
 	
@@ -218,46 +208,55 @@ function rollDice() {
 	var firstExpansion = document.getElementById("first-expansion").value;
 	var secondExpansion = document.getElementById("second-expansion").value;
 	var currentDicePool = dicePool[mainSetting].dice.concat(expansions[firstExpansion].dice, expansions[secondExpansion].dice);
-	var maxRounds = dicePool[mainSetting].rounds + expansions[firstExpansion].rounds + expansions[secondExpansion].rounds;
+	var effective_die = dicePool[mainSetting].effective_dice + expansions[firstExpansion].effective_dice + expansions[secondExpansion].effective_dice;
+	var maxRounds = Math.floor(dicePool[mainSetting].board_size / effective_die);
+	var border = (dicePool[mainSetting].dice).length
+	
+	roundImg = createSquare(200, '#202124', "Round " + currentRound + "/" + maxRounds);
+	
+	if (currentRound <= maxRounds) {
+		currentRound += 1;
+		var container = document.createElement("div");
+		container.appendChild(roundImg)
+		var row = document.createElement("div");
+
+		for (var i = 0; i < currentDicePool.length; i++) {
 		
-	if (currentRound < maxRounds) {
-	var imgSize = Math.round(document.documentElement.clientWidth / (currentDicePool.length + 1.1));
-	var roundImg = document.createElement("img");
-	var row = document.createElement("div");
-	
-	
-	roundImg = createSquare(200, '#202124', "Round " + currentRound)
-	currentRound += 1;
-	row.appendChild(roundImg);
-	row.classList.add("image-row");
-	
-	for (var i = 0; i < currentDicePool.length; i++) {
-		var roll = Math.floor(Math.random() * 6) + 1;
-		var diceImg = document.createElement("img");
-		diceImg.height = 200;
-		diceImg.width = 200;
-		diceImg.classList.add("disable-dbl-tap-zoom", "blur");
-		diceImg.setAttribute('onclick', "spoiler(this)")
-		diceImg.src = "dice/" + currentDicePool[i] + roll + ".png";
-		row.appendChild(diceImg);
+			if (i == border) {
+				row.setAttribute('onclick', "spoiler(this)")
+				row.classList.add("disable-dbl-tap-zoom", "blur", "image-row");
+				container.appendChild(row);
+				var row = document.createElement("div");	
+			}
+			var roll = Math.floor(rand(1,6));
+			var diceImg = document.createElement("img");
+			diceImg.height = 200;
+			diceImg.width = 200;
+			diceImg.src = "dice/" + currentDicePool[i] + roll + ".png";
+			row.appendChild(diceImg);
 	}
-	
-	container.appendChild(row);
-	
+	row.setAttribute('onclick', "spoiler(this)")
+	row.classList.add("disable-dbl-tap-zoom", "blur", "image-row");
+	container.classList.add("row-container");
+	container.appendChild(row)
+	resCon.appendChild(container);
 	}
 	
 }
 
+function rand(min, max){
+    return (Math.floor(Math.pow(10,14)*Math.random()*Math.random())%(max-min+1))+min;
+}
+
 function createSquare(size, color, text) {
   var square = document.createElement("div");
-  square.style.width = size + "px";
-  square.style.height = size + "px";
-  square.style.backgroundColor = color;
   var textNode = document.createTextNode(text);
-  square.appendChild(textNode);
   square.style.color = "white";
-  square.style.textAlign = "center";
-  square.style.lineHeight = size + "px";
+  square.style.backgroundColor = color;
+  square.appendChild(textNode);
+  square.style.fontSize = 25 + 'px';
+  square.style.height = 25 + 'px';
+  square.style.lineHeight = 25 + 'px';
   return square;
 }
 
@@ -278,6 +277,6 @@ function spoiler(elem) {
 
 function clearBox(elementID)
 {
-	currentRound = 0;
+	currentRound = 1;
     document.getElementById(elementID).innerHTML = "";
 }
