@@ -1,2 +1,2 @@
 # Railroad-Ink-Assistant
-This program is an android phone / tablet app developed using Android Studio, to be used in combination with the popular board game, Railroad Ink. Railroad Ink seeks to digitialise many parts of the board game, mainly the dice rolling phase, as well providing a digital library for all rules needed to play the game.
+This HTML/CSS web program is intended to be used in conjunction with the popular board game Railroad Ink. Railroad Ink Assistant aims to digitize many aspects of the board game, primarily the dice rolling phase, as well as provide a digital library of all game rules.

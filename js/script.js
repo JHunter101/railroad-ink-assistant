@@ -210,6 +210,8 @@ var expansions = {
 	}
 };
 
+var currentRound = 0;
+
 function rollDice() {
 	
 	var mainSetting = document.getElementById("main-setting").value;
@@ -223,10 +225,9 @@ function rollDice() {
 	var roundImg = document.createElement("img");
 	var row = document.createElement("div");
 	
-	roundImg.height = 200;
-	roundImg.width = 200;
+	
+	roundImg = createSquare(200, '#202124', "Round " + currentRound)
 	currentRound += 1;
-	roundImg.src = "round_" + currentRound + ".png";
 	row.appendChild(roundImg);
 	row.classList.add("image-row");
 	
@@ -247,6 +248,20 @@ function rollDice() {
 	
 }
 
+function createSquare(size, color, text) {
+  var square = document.createElement("div");
+  square.style.width = size + "px";
+  square.style.height = size + "px";
+  square.style.backgroundColor = color;
+  var textNode = document.createTextNode(text);
+  square.appendChild(textNode);
+  square.style.color = "white";
+  square.style.textAlign = "center";
+  square.style.lineHeight = size + "px";
+  return square;
+}
+
+
 function unhide_elem(elem) {
 	var element = document.getElementById(elem);
   	element.classList.remove('hidden');
@@ -260,8 +275,6 @@ function hide_elem(elem) {
 function spoiler(elem) {
   	elem.classList.toggle('blur');
 }
-
-var currentRound = 0;
 
 function clearBox(elementID)
 {
