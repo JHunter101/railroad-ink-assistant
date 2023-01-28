@@ -9,13 +9,14 @@
       <script src="js/script.js"></script>
       <meta name="viewport" content="width=device-width, initial-scale=1">
    </head>
+
    <body>
       <section id="air" class = "section">
       </section>
       <section id="buttons" class = "section">
          <div class="button-container">
-            <a href="#air" class="btn btn-primary roll-dice" onclick="setCookie('html_content', document.documentElement.outerHTML, 7); rollDice(); hide_elem('options'); unhide_elem('results');">Roll Dice</button> </a>
-            <a href="#air" class="btn btn-primary reset" onclick="setCookie('html_content', document.documentElement.outerHTML, 7); hide_elem('results'); unhide_elem('options');">Reset</button> </a>
+            <a href="#air" class="btn btn-primary roll-dice" onclick="setLocalStorage('pageHTML', document.documentElement.outerHTML); rollDice(); hide_elem('options'); unhide_elem('results');">Roll Dice</button> </a>
+            <a href="#air" class="btn btn-primary reset" onclick="setLocalStorage('pageHTML', document.documentElement.outerHTML); hide_elem('results'); unhide_elem('options');">Reset</button> </a>
          </div>
       </section>
       <section id="options" class = "section">
