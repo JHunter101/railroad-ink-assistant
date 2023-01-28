@@ -12,6 +12,6 @@ function saveProgress(key, value) {
 	localStorage.setItem('secondExpansion', secondExpansion);
 }
 // function to load data from local storage
-function loadProgress(key) {
+function getLocalStorage(key) {
 	return localStorage.getItem(key);
 }

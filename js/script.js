@@ -6,8 +6,8 @@ function rollDice() {
 	var effective_die = dicePool[mainSetting].effective_dice + expansions[firstExpansion].effective_dice + expansions[secondExpansion].effective_dice;
 	var maxRounds = Math.floor(dicePool[mainSetting].board_size / effective_die);
 	var border = (dicePool[mainSetting].dice).length
-	var currentRound = document.getElementById("resCon").children.length;
-	roundImg = createSquare(200, '#202124', "Round " + currentRound + "/" + maxRounds);
+	var currentRound = document.getElementById("resCon").children.length + 1;
+	roundImg = createSquare(200, '#202124', "Round " + "/" + maxRounds);
 	if (currentRound <= maxRounds) {
 		var container = document.createElement("div");
 		container.appendChild(roundImg)
