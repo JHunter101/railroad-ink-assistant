@@ -10,7 +10,7 @@ window.onload = function() {
 		console.log(document.getElementById("first-expansion").value);
 		console.log(document.getElementById("second-expansion").value);
 	}
-});
+};
 
 // function to save data to local storage
 function saveProgress(key, value) {
