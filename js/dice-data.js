@@ -60,8 +60,8 @@ var expansions = {
 		effective_dice: 0
 	},
 	"city-builder": {
-		dice: ["Future/images/future_citybuilderA_",
-			"Future/images/future_citybuilderB_"
+		dice: ["Future/images/future_cityBuilderA_",
+			"Future/images/future_cityBuilderB_"
 		],
 		effective_dice: 1
 	},
@@ -160,7 +160,7 @@ var expansions = {
 		effective_dice: 1
 	},
 	"tentacle": {
-		dice: ["Cthulu/images/cthulu_tentacleA_"],
+		dice: ["Cthulu/images/cthulu_tentaclesA_"],
 		effective_dice: 0
 	},
 	"tetromino": {
@@ -168,8 +168,8 @@ var expansions = {
 		effective_dice: 0
 	},
 	"trail": {
-		dice: ["Green/images/green_trailA_",
-			"Green/images/green_trailA_"
+		dice: ["Green/images/green_trailsA_",
+			"Green/images/green_trailsA_"
 		],
 		effective_dice: 2
 	},
@@ -183,7 +183,7 @@ var expansions = {
 	},
 	"weather": {
 		dice: ["Sky/images/sky_weatherA_",
-			"Sky/images/sky_weatherB_"
+			"Sky/images/sky_weatherA_"
 		],
 		effective_dice: 0
 	}
