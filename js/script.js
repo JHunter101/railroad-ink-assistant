@@ -72,5 +72,8 @@ function spoiler(elem) {
 }
 
 function clearBox(elementID) {
+	mainSetting = document.getElementById("main-setting").value = "";
+	firstExpansion = document.getElementById("first-expansion").value = "";
+	secondExpansion = document.getElementById("second-expansion").value = "";
 	document.getElementById(elementID).innerHTML = "";
 }
