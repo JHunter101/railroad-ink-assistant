@@ -1,8 +1,11 @@
 /*-------------------------------------------------------------- # General Section --------------------------------------------------------------*/
- body {
-     font-family: Arial, sans-serif;
+
+html *
+{
+   font-family: Monospace, sans-serif; !important;
 }
- #results {
+
+#results {
      text-align: center;
 }
  :root {
@@ -69,8 +72,10 @@
      margin: 0.5em;
 }
  .blur {
-     filter: brightness(4%) blur(0.5em);
+    filter: brightness(4%) blur(0.5em);
+	position: relative;
 }
+
 /*-------------------------------------------------------------- # Buttons Section --------------------------------------------------------------*/
  .button-container{
      text-align: center;
@@ -111,9 +116,9 @@
      display: flex;
      justify-content: center;
 }
- @media (max-width: 768px) {
+ @media (max-width: 1000px) {
      .section {
-         padding: 5% 5%;
+         padding: 5%;
     }
      #air {
          padding: 5% 0;
@@ -121,7 +126,7 @@
      form {
          flex-wrap: nowrap;
          flex-direction: column;
-         padding: 0% 0%;
+         padding: 0%;
     }
      #options .options-container {
          padding: 5% 0%;
