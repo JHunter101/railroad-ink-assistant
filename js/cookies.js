@@ -5,15 +5,11 @@ window.onload = function() {
 		document.getElementById("main-setting").value = getLocalStorage('mainSetting');
 		document.getElementById("first-expansion").value = getLocalStorage('firstExpansion');
 		document.getElementById("second-expansion").value = getLocalStorage('secondExpansion');
-		
-		console.log(document.getElementById("main-setting").value);
-		console.log(document.getElementById("first-expansion").value);
-		console.log(document.getElementById("second-expansion").value);
 	}
 };
 
 // function to save data to local storage
-function saveProgress(key, value) {
+function saveProgress() {
 	var mainSetting = document.getElementById("main-setting");
 	var firstExpansion = document.getElementById("first-expansion");
 	var secondExpansion = document.getElementById("second-expansion");
