@@ -1,3 +1,10 @@
+function clearLocalStorage() {
+	clearBox('resCon');
+	hide_elem('results');
+	unhide_elem('options');
+	localStorage.clear();
+}
+
 function rollDice() {
 	var mainSetting = document.getElementById("main-setting").value;
 	var firstExpansion = document.getElementById("first-expansion").value;

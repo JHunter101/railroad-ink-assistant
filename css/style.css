@@ -15,7 +15,7 @@ html *
  .section {
      overflow: hidden;
      position: relative;
-     padding: 2% 0;
+     padding: 1% 0;
      margin-bottom: 0;
 }
  .section:before {
@@ -28,7 +28,7 @@ html *
 }
 /*-------------------------------------------------------------- # Air Section --------------------------------------------------------------*/
  #air {
-     padding: 2% 0;
+     padding: 1% 0;
 }
 /*-------------------------------------------------------------- # Options Section --------------------------------------------------------------*/
  #options .options-container {
@@ -91,7 +91,7 @@ html *
  .btn {
      display: inline-block;
      padding: 1em 2em;
-     font-size: 1.2em;
+     font-size: 1em;
      font-weight: 600;
      text-align: center;
      text-decoration: none;
@@ -113,12 +113,13 @@ html *
  .reset {
      background-color: #dc3545;
 }
+
  @media (max-width: 1000px) {
      .section {
          padding: 5%;
     }
      #air {
-         padding: 5% 0;
+         padding: 2% 0;
     }
      form {
          flex-wrap: nowrap;
