@@ -1,18 +1,14 @@
-window.addEventListener('load', function() {
+window.onload = function() {
 	if (localStorage.getItem('pageHTML') !== null) {
-		var llmainSetting = document.getElementById("main-setting");
-		var llfirstExpansion = document.getElementById("first-expansion");
-		var llsecondExpansion = document.getElementById("second-expansion");
-		
-		console.log(getLocalStorage('mainSetting'));
-		console.log(getLocalStorage('firstExpansion'));
-		console.log(getLocalStorage('secondExpansion'));
-		
 		// load the saved HTML from local storage and set it as the HTML of the body element
 		document.documentElement.innerHTML = getLocalStorage('pageHTML');
-		llmainSetting.value = getLocalStorage('mainSetting');
-		llfirstExpansion.value = getLocalStorage('firstExpansion');
-		llsecondExpansion.value = getLocalStorage('secondExpansion');
+		document.getElementById("main-setting").value = getLocalStorage('mainSetting');
+		document.getElementById("first-expansion").value = getLocalStorage('firstExpansion');
+		document.getElementById("second-expansion").value = getLocalStorage('secondExpansion');
+		
+		console.log(document.getElementById("main-setting").value);
+		console.log(document.getElementById("first-expansion").value);
+		console.log(document.getElementById("second-expansion").value);
 	}
 });
 
@@ -26,9 +22,6 @@ function saveProgress(key, value) {
 	localStorage.setItem('mainSetting', mainSetting.value);
 	localStorage.setItem('firstExpansion', firstExpansion.value);
 	localStorage.setItem('secondExpansion', secondExpansion.value);
-	console.log(mainSetting.value);
-	console.log(firstExpansion.value);
-	console.log(secondExpansion.value);
 }
 
 // function to load data from local storage
