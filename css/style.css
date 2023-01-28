@@ -80,6 +80,8 @@ html *
  .button-container{
      text-align: center;
      width: 100%;
+     display: flex;
+     justify-content: center;
 }
  #roll-dice, #reset {
      width: 45%;
@@ -110,11 +112,6 @@ html *
 /* Reset button styles */
  .reset {
      background-color: #dc3545;
-}
-/* Buttons container styles */
- .button-container {
-     display: flex;
-     justify-content: center;
 }
  @media (max-width: 1000px) {
      .section {

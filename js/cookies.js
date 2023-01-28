@@ -1,7 +1,7 @@
 window.onload = function() {
-	if (localStorage.getItem('pageHTML') !== null) {
+	if (localStorage.getItem('railroad-ink-assistant-pageHTML') !== null) {
 		// load the saved HTML from local storage and set it as the HTML of the body element
-		document.documentElement.innerHTML = getLocalStorage('pageHTML');
+		document.documentElement.innerHTML = getLocalStorage('railroad-ink-assistant-pageHTML');
 		document.getElementById("main-setting").value = getLocalStorage('mainSetting');
 		document.getElementById("first-expansion").value = getLocalStorage('firstExpansion');
 		document.getElementById("second-expansion").value = getLocalStorage('secondExpansion');
@@ -12,7 +12,7 @@ function saveProgress() {
 	var mainSetting = document.getElementById("main-setting");
 	var firstExpansion = document.getElementById("first-expansion");
 	var secondExpansion = document.getElementById("second-expansion");
-	localStorage.setItem('pageHTML', document.documentElement.innerHTML);
+	localStorage.setItem('railroad-ink-assistant-pageHTML', document.documentElement.innerHTML);
 	localStorage.setItem('mainSetting', mainSetting.value);
 	localStorage.setItem('firstExpansion', firstExpansion.value);
 	localStorage.setItem('secondExpansion', secondExpansion.value);
