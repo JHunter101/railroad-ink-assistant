@@ -115,9 +115,6 @@ html *
 }
 
  @media (max-width: 1000px) {
-     .section {
-         padding: 0%;
-    }
      #air {
          padding: 2% 0;
     }
