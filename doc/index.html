@@ -3,9 +3,16 @@
 
 <head>
 	<title>Railroad Ink Assistant</title>
-	<link rel="icon" type="image/x-icon" href="icon.ico">
-	<link rel="stylesheet" type="text/css" href="src/css/style.css">
-	<link rel="stylesheet" type="text/css" href="src/css/pico.min.css">
+	<link rel="icon" type="image/x-icon" href="../icon.ico">
+	<link rel="stylesheet" type="text/css" href="../src/css/style.css">
+	<link rel="stylesheet" type="text/css" href="../src/css/pico.min.css">
+
+	
+	
+
+<script type="module" src="../dist/dice-data.js"></script>
+<script type="module" src="../dist/cookies.js"></script>
+<script type="module" src="../dist/script.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -64,7 +71,7 @@
 					</select>
 					<label>Select second expansion:</label>
 					<select id="second-expansion">
-						<option value="none">No expansion 1</option>
+						<option value="none">No expansion 2</option>
 						<option value="airline">Airline</option>
 						<option value="alien-farmer">Alien Farmer</option>
 						<option value="canyon">Canyon</option>
@@ -108,9 +115,5 @@
 		</div>
 	</section>
 </body>
-
-<script type="module" src="src/ts/dice-data.js"></script>
-<script type="module" src="src/ts/cookies.js"></script>
-<script type="module" src="src/ts/script.js"></script>
 
 </html>

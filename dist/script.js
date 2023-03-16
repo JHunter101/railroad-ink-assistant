@@ -1,8 +1,9 @@
 import { dicePool, expansions } from './dice-data';
-export function getDiceList(mainSetting, firstExpansion, secondExpansion) {
+console.log();
+function getDiceList(mainSetting, firstExpansion, secondExpansion) {
     return dicePool[mainSetting].dice.concat(expansions[firstExpansion].dice, expansions[secondExpansion].dice);
 }
-export function getMaxRounds(mainSetting, firstExpansion, secondExpansion) {
+function getMaxRounds(mainSetting, firstExpansion, secondExpansion) {
     var _a;
     const effectiveDie = dicePool[mainSetting].effective_dice +
         expansions[firstExpansion].effective_dice +
@@ -10,7 +11,7 @@ export function getMaxRounds(mainSetting, firstExpansion, secondExpansion) {
     const boardSize = (_a = dicePool[mainSetting].board_size) !== null && _a !== void 0 ? _a : 0;
     return Math.floor(boardSize / effectiveDie);
 }
-export function setupGame() {
+function setupGame() {
     const mainSetting = document.getElementById('main-setting');
     const firstExpansion = document.getElementById('first-expansion');
     const secondExpansion = document.getElementById('second-expansion');
@@ -19,7 +20,7 @@ export function setupGame() {
     const rowLength = dicePool[mainSetting.value].dice.length;
     return { currentDiceList, maxRounds, rowLength };
 }
-export function rollDice() {
+function rollDice() {
     const rescon = document.getElementById('resCon');
     const currentRound = rescon.children.length + 1;
     if (currentRound == 1) {
@@ -57,12 +58,12 @@ export function rollDice() {
         rescon.appendChild(container);
     }
 }
-export function rand(min, max) {
+function rand(min, max) {
     return ((Math.floor(Math.pow(10, 14) * Math.random() * Math.random()) %
         (max - min + 1)) +
         min);
 }
-export function createSquare(size, color, text) {
+function createSquare(size, color, text) {
     const square = document.createElement('div');
     const textNode = document.createTextNode(text);
     square.style.color = 'white';
@@ -73,30 +74,31 @@ export function createSquare(size, color, text) {
     square.style.lineHeight = 25 + 'px';
     return square;
 }
-export function unhide_elem(elem) {
+function unhide_elem(elem) {
     const element = document.getElementById(elem);
     if (element)
         element.classList.remove('hidden');
 }
-export function hide_elem(elem) {
+function hide_elem(elem) {
     const element = document.getElementById(elem);
     if (element)
         element.classList.add('hidden');
 }
-export function spoiler(elem) {
+function spoiler(elem) {
     const element = document.getElementById(elem);
     if (element)
         element.classList.toggle('blur');
 }
-export function clearBox(elem) {
+function clearBox(elem) {
     const mainSetting = (document.getElementById('main-setting').value = 'classic');
     const firstExpansion = (document.getElementById('first-expansion').value = 'none');
     const secondExpansion = (document.getElementById('second-expansion').value = 'none');
     document.getElementById(elem).innerHTML = '';
 }
-export function clearLocalStorage() {
+function clearLocalStorage() {
     clearBox('resCon');
     hide_elem('results');
     unhide_elem('options');
     localStorage.clear();
 }
+console.log();

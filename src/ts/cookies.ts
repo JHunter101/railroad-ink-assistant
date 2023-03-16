@@ -32,7 +32,7 @@ window.onload = function (): void {
 };
 
 // function to save data to local storage
-export function saveProgress() {
+function saveProgress() {
   const mainSetting = document.getElementById(
     'main-setting',
   ) as HTMLInputElement;

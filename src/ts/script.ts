@@ -1,9 +1,11 @@
-import { dicePool, dicePoolType, expansions } from './dice-data';
+import { dicePool, expansions } from './dice-data';
 declare let currentDiceList: string[];
 declare let maxRounds: number;
 declare let rowLength: number;
 
-export function getDiceList(
+console.log();
+
+function getDiceList(
   mainSetting: string,
   firstExpansion: string,
   secondExpansion: string,
@@ -14,7 +16,7 @@ export function getDiceList(
   );
 }
 
-export function getMaxRounds(
+function getMaxRounds(
   mainSetting: string,
   firstExpansion: string,
   secondExpansion: string,
@@ -27,7 +29,7 @@ export function getMaxRounds(
   return Math.floor(boardSize / effectiveDie);
 }
 
-export function setupGame(): {
+function setupGame(): {
   currentDiceList: string[];
   maxRounds: number;
   rowLength: number;
@@ -59,7 +61,7 @@ export function setupGame(): {
   return { currentDiceList, maxRounds, rowLength };
 }
 
-export function rollDice(): void {
+function rollDice(): void {
   const rescon = document.getElementById('resCon') as HTMLInputElement;
   const currentRound = rescon.children.length + 1;
 
@@ -109,7 +111,7 @@ export function rollDice(): void {
   }
 }
 
-export function rand(min: number, max: number): number {
+function rand(min: number, max: number): number {
   return (
     (Math.floor(Math.pow(10, 14) * Math.random() * Math.random()) %
       (max - min + 1)) +
@@ -117,7 +119,7 @@ export function rand(min: number, max: number): number {
   );
 }
 
-export function createSquare(
+function createSquare(
   size: number,
   color: string,
   text: string,
@@ -133,23 +135,23 @@ export function createSquare(
   return square;
 }
 
-export function unhide_elem(elem: string): void {
+function unhide_elem(elem: string): void {
   const element = document.getElementById(elem);
 
   if (element) element.classList.remove('hidden');
 }
 
-export function hide_elem(elem: string): void {
+function hide_elem(elem: string): void {
   const element = document.getElementById(elem);
   if (element) element.classList.add('hidden');
 }
 
-export function spoiler(elem: string): void {
+function spoiler(elem: string): void {
   const element = document.getElementById(elem);
   if (element) element.classList.toggle('blur');
 }
 
-export function clearBox(elem: string): void {
+function clearBox(elem: string): void {
   const mainSetting = ((
     document.getElementById('main-setting') as HTMLInputElement
   ).value = 'classic');
@@ -165,9 +167,11 @@ export function clearBox(elem: string): void {
   (document.getElementById(elem) as HTMLInputElement).innerHTML = '';
 }
 
-export function clearLocalStorage(): void {
+function clearLocalStorage(): void {
   clearBox('resCon');
   hide_elem('results');
   unhide_elem('options');
   localStorage.clear();
 }
+
+console.log();

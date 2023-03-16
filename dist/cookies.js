@@ -1,3 +1,4 @@
+"use strict";
 window.onload = function () {
     var _a, _b, _c, _d, _e, _f;
     const myCookies = localStorage.getItem('railroad-ink-assistant-pageHTML');
@@ -16,7 +17,7 @@ window.onload = function () {
     const rowLength = (_f = Number(localStorage.getItem('rowLength'))) !== null && _f !== void 0 ? _f : 0;
 };
 // function to save data to local storage
-export function saveProgress() {
+function saveProgress() {
     const mainSetting = document.getElementById('main-setting');
     const firstExpansion = document.getElementById('first-expansion');
     const secondExpansion = document.getElementById('second-expansion');

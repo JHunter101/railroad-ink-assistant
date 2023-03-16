@@ -1,4 +1,4 @@
-export type dicePoolType = {
+type dicePoolType = {
   dice: string[];
   effective_dice: number;
   board_size?: number;
