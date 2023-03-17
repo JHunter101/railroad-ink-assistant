@@ -33,7 +33,7 @@ function rollDice() {
         const container = document.createElement('div');
         container.appendChild(roundImg);
         // dice
-        const row = document.createElement('div');
+        let row = document.createElement('div');
         for (let i = 0; i < currentDiceList.length; i++) {
             // random
             const roll = Math.floor(rand(1, 6));
@@ -45,9 +45,11 @@ function rollDice() {
             // Next Row
             if (i == rowLength - 1 || i == currentDiceList.length - 1) {
                 // dice
+                console.log('test');
                 row.setAttribute('onclick', 'spoiler(this)');
                 row.classList.add('disable-dbl-tap-zoom', 'blur', 'image-row');
                 container.appendChild(row);
+                row = document.createElement('div');
             }
         }
         container.classList.add('row-container');

@@ -19,12 +19,6 @@ window.onload = function (): void {
   mainSetting.value = localStorage.getItem('mainSetting') ?? 'classic';
   firstExpansion.value = localStorage.getItem('firstExpansion') ?? 'none';
   secondExpansion.value = localStorage.getItem('secondExpansion') ?? 'none';
-
-  const currentDiceList = (localStorage.getItem('currentDiceList') ?? '').split(
-    ',',
-  );
-  const maxRounds = Number(localStorage.getItem('maxRounds')) ?? 0;
-  const rowLength = Number(localStorage.getItem('rowLength')) ?? 0;
 };
 
 // function to save data to local storage
