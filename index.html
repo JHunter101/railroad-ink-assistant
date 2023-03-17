@@ -2,118 +2,115 @@
 <html>
 
 <head>
-	<title>Railroad Ink Assistant</title>
-	<link rel="icon" type="image/x-icon" href="icon.ico">
-	<link rel="stylesheet" type="text/css" href="src/css/style.css">
-	<link rel="stylesheet" type="text/css" href="src/css/pico.min.css">
-
-	
-	
-
-<script type="module" src="dist/dice-data.js"></script>
-<script type="module" src="dist/cookies.js"></script>
-<script type="module" src="dist/script.js"></script>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Railroad Ink Assistant</title>
+    <link rel="icon" type="image/x-icon" href="icon.ico">
+    <link rel="stylesheet" type="text/css" href="src/css/style.css">
+    <link rel="stylesheet" type="text/css" href="src/css/pico.min.css">
+	<script src="dist/globals.js"></script>
+	<script src="dist/dice-data.js"></script>
+	<script src="dist/script.js"></script>
+	<script src="dist/cookies.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
 <body>
-	<section id="air" class="section">
-	</section>
-	<section id="buttons" class="section">
-		<div class="button-container">
-			<a href="#air" class="btn btn-primary roll-dice" onclick="rollDice(); hide_elem('options'); unhide_elem('results'); saveProgress(); ">Roll Dice</button> </a>
-			<a href="#air" class="btn btn-primary reset" onclick="clearBox('resCon'); hide_elem('results'); unhide_elem('options'); saveProgress(); ">Reset</button> </a>
-		</div>
-	</section>
-	<section id="options" class="section">
-		<div class="options-container wow fadeIn">
-			<h1>Railroad Ink Assistant</h1>
-			<h3>By Jack Chen</h3>
-				<form>
-					<label>Select main setting:</label>
-					<select id="main-setting">
-						<option value="classic">Classic</option>
-						<option value="challenge">Challenge</option>
-						<option value="giant">Giant</option>
-						<option value="epic">Epic</option>
-					</select>
-					<label>Select first expansion:</label>
-					<select id="first-expansion">
-						<option value="none">No expansion 1</option>
-						<option value="airline">Airline</option>
-						<option value="alien-farmer">Alien Farmer</option>
-						<option value="canyon">Canyon</option>
-						<option value="city-builder">City Builder</option>
-						<option value="construction">Construction</option>
-						<option value="desert">Desert</option>
-						<option value="forest">Forest</option>
-						<option value="galactic-invaders">Galactic Invaders</option>
-						<option value="investigation">Investigation</option>
-						<option value="lake">Lake</option>
-						<option value="lava">Lava</option>
-						<option value="meteor">Meteor</option>
-						<option value="pluck-man">Pluck-man</option>
-						<option value="portal">Portal</option>
-						<option value="power-grid">Power grid</option>
-						<option value="rainbow">Rainbow</option>
-						<option value="renovation">Renovation</option>
-						<option value="ritual">Ritual</option>
-						<option value="river">River</option>
-						<option value="separation">Separation</option>
-						<option value="special">Special</option>
-						<option value="street-lamps">Street lamps</option>
-						<option value="superconnection">Superconnection</option>
-						<option value="tentacle">Tentacle</option>
-						<option value="tetromino">Tetromino</option>
-						<option value="trail">Trail</option>
-						<option value="underground">Underground</option>
-						<option value="weather">Weather</option>
-					</select>
-					<label>Select second expansion:</label>
-					<select id="second-expansion">
-						<option value="none">No expansion 2</option>
-						<option value="airline">Airline</option>
-						<option value="alien-farmer">Alien Farmer</option>
-						<option value="canyon">Canyon</option>
-						<option value="city-builder">City Builder</option>
-						<option value="construction">Construction</option>
-						<option value="desert">Desert</option>
-						<option value="forest">Forest</option>
-						<option value="galactic-invaders">Galactic Invaders</option>
-						<option value="investigation">Investigation</option>
-						<option value="lake">Lake</option>
-						<option value="lava">Lava</option>
-						<option value="meteor">Meteor</option>
-						<option value="pluck-man">Pluck-man</option>
-						<option value="portal">Portal</option>
-						<option value="power-grid">Power grid</option>
-						<option value="rainbow">Rainbow</option>
-						<option value="renovation">Renovation</option>
-						<option value="ritual">Ritual</option>
-						<option value="river">River</option>
-						<option value="separation">Separation</option>
-						<option value="special">Special</option>
-						<option value="street-lamps">Street lamps</option>
-						<option value="superconnection">Superconnection</option>
-						<option value="tentacle">Tentacle</option>
-						<option value="tetromino">Tetromino</option>
-						<option value="trail">Trail</option>
-						<option value="underground">Underground</option>
-						<option value="weather">Weather</option>
-					</select>
-				</form>
-		</div>
-	</section>
-	<section id="results" class="section hidden">
-		<div id="resCon" class="wow fadeIn">
-		</div>
-	</section>
-	
-	<section id="buttons" class="section">
-		<div class="button-container">
-			<a href="#air" class="btn btn-primary clear-storage reset" onclick="clearLocalStorage()">Clear Local Storage</button> </a>
-		</div>
-	</section>
+    <section id="air" class="section">
+    </section>
+    <section id="buttons" class="section">
+        <div class="button-container">
+            <a href="#air" class="btn btn-primary roll-dice" onclick="rollDice(); hide_elem('options'); unhide_elem('results'); saveProgress(); ">Roll Dice</button> </a>
+            <a href="#air" class="btn btn-primary reset" onclick="clearBox('resCon'); hide_elem('results'); unhide_elem('options'); saveProgress(); ">Reset</button> </a>
+        </div>
+    </section>
+    <section id="options" class="section">
+        <div class="options-container wow fadeIn">
+            <h1>Railroad Ink Assistant</h1>
+            <h3>By Jack Chen</h3>
+            <form>
+                <label>Select main setting:</label>
+                <select id="main-setting">
+                    <option value="classic">Classic</option>
+                    <option value="challenge">Challenge</option>
+                    <option value="giant">Giant</option>
+                    <option value="epic">Epic</option>
+                </select>
+                <label>Select first expansion:</label>
+                <select id="first-expansion">
+                    <option value="none">No expansion 1</option>
+                    <option value="airline">Airline</option>
+                    <option value="alien-farmer">Alien Farmer</option>
+                    <option value="canyon">Canyon</option>
+                    <option value="city-builder">City Builder</option>
+                    <option value="construction">Construction</option>
+                    <option value="desert">Desert</option>
+                    <option value="forest">Forest</option>
+                    <option value="galactic-invaders">Galactic Invaders</option>
+                    <option value="investigation">Investigation</option>
+                    <option value="lake">Lake</option>
+                    <option value="lava">Lava</option>
+                    <option value="meteor">Meteor</option>
+                    <option value="pluck-man">Pluck-man</option>
+                    <option value="portal">Portal</option>
+                    <option value="power-grid">Power grid</option>
+                    <option value="rainbow">Rainbow</option>
+                    <option value="renovation">Renovation</option>
+                    <option value="ritual">Ritual</option>
+                    <option value="river">River</option>
+                    <option value="separation">Separation</option>
+                    <option value="special">Special</option>
+                    <option value="street-lamps">Street lamps</option>
+                    <option value="superconnection">Superconnection</option>
+                    <option value="tentacle">Tentacle</option>
+                    <option value="tetromino">Tetromino</option>
+                    <option value="trail">Trail</option>
+                    <option value="underground">Underground</option>
+                    <option value="weather">Weather</option>
+                </select>
+                <label>Select second expansion:</label>
+                <select id="second-expansion">
+                    <option value="none">No expansion 2</option>
+                    <option value="airline">Airline</option>
+                    <option value="alien-farmer">Alien Farmer</option>
+                    <option value="canyon">Canyon</option>
+                    <option value="city-builder">City Builder</option>
+                    <option value="construction">Construction</option>
+                    <option value="desert">Desert</option>
+                    <option value="forest">Forest</option>
+                    <option value="galactic-invaders">Galactic Invaders</option>
+                    <option value="investigation">Investigation</option>
+                    <option value="lake">Lake</option>
+                    <option value="lava">Lava</option>
+                    <option value="meteor">Meteor</option>
+                    <option value="pluck-man">Pluck-man</option>
+                    <option value="portal">Portal</option>
+                    <option value="power-grid">Power grid</option>
+                    <option value="rainbow">Rainbow</option>
+                    <option value="renovation">Renovation</option>
+                    <option value="ritual">Ritual</option>
+                    <option value="river">River</option>
+                    <option value="separation">Separation</option>
+                    <option value="special">Special</option>
+                    <option value="street-lamps">Street lamps</option>
+                    <option value="superconnection">Superconnection</option>
+                    <option value="tentacle">Tentacle</option>
+                    <option value="tetromino">Tetromino</option>
+                    <option value="trail">Trail</option>
+                    <option value="underground">Underground</option>
+                    <option value="weather">Weather</option>
+                </select>
+            </form>
+        </div>
+    </section>
+    <section id="results" class="section hidden">
+        <div id="resCon" class="wow fadeIn">
+        </div>
+    </section>
+
+    <section id="buttons" class="section">
+        <div class="button-container">
+            <a href="#air" class="btn btn-primary clear-storage reset" onclick="clearLocalStorage()">Clear Local Storage</button> </a>
+        </div>
+    </section>
 </body>
 
 </html>

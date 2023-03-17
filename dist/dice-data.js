@@ -1,4 +1,5 @@
-export const dicePool = {
+"use strict";
+const dicePool = {
     classic: {
         dice: [
             'Classic/images/classic_defaultA_',
@@ -42,7 +43,7 @@ export const dicePool = {
         board_size: 87, // 121
     },
 };
-export const expansions = {
+const expansions = {
     none: {
         dice: [],
         effective_dice: 0.5,

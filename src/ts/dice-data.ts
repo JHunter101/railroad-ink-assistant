@@ -4,7 +4,7 @@ type dicePoolType = {
   board_size?: number;
 };
 
-export const dicePool: { [key: string]: dicePoolType } = {
+const dicePool: { [key: string]: dicePoolType } = {
   classic: {
     dice: [
       'Classic/images/classic_defaultA_',
@@ -49,7 +49,7 @@ export const dicePool: { [key: string]: dicePoolType } = {
   },
 };
 
-export const expansions: { [key: string]: dicePoolType } = {
+const expansions: { [key: string]: dicePoolType } = {
   none: {
     dice: [],
     effective_dice: 0.5,

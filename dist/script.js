@@ -1,5 +1,4 @@
-import { dicePool, expansions } from './dice-data';
-console.log();
+"use strict";
 function getDiceList(mainSetting, firstExpansion, secondExpansion) {
     return dicePool[mainSetting].dice.concat(expansions[firstExpansion].dice, expansions[secondExpansion].dice);
 }
@@ -15,20 +14,19 @@ function setupGame() {
     const mainSetting = document.getElementById('main-setting');
     const firstExpansion = document.getElementById('first-expansion');
     const secondExpansion = document.getElementById('second-expansion');
-    const currentDiceList = getDiceList(mainSetting.value, firstExpansion.value, secondExpansion.value);
-    const maxRounds = getMaxRounds(mainSetting.value, firstExpansion.value, secondExpansion.value);
-    const rowLength = dicePool[mainSetting.value].dice.length;
-    return { currentDiceList, maxRounds, rowLength };
+    const myCurrentDiceList = getDiceList(mainSetting.value, firstExpansion.value, secondExpansion.value);
+    const myMaxRounds = getMaxRounds(mainSetting.value, firstExpansion.value, secondExpansion.value);
+    const myRowLength = dicePool[mainSetting.value].dice.length;
+    return { myCurrentDiceList, myMaxRounds, myRowLength };
 }
 function rollDice() {
     const rescon = document.getElementById('resCon');
     const currentRound = rescon.children.length + 1;
-    if (currentRound == 1) {
-        const _setupGame = setupGame();
-        currentDiceList = _setupGame.currentDiceList;
-        maxRounds = _setupGame.maxRounds;
-        rowLength = _setupGame.rowLength;
-    }
+    // TODO DON'T LOOP EVERY TIME
+    const myGameSetup = setupGame();
+    const currentDiceList = myGameSetup.myCurrentDiceList;
+    const maxRounds = myGameSetup.myMaxRounds;
+    const rowLength = myGameSetup.myRowLength;
     if (currentRound <= maxRounds) {
         const roundImg = createSquare(200, '#202124', 'Round ' + currentRound + '/' + maxRounds);
         // dice + round banner
@@ -50,7 +48,6 @@ function rollDice() {
                 row.setAttribute('onclick', 'spoiler(this)');
                 row.classList.add('disable-dbl-tap-zoom', 'blur', 'image-row');
                 container.appendChild(row);
-                row.innerHTML = '';
             }
         }
         container.classList.add('row-container');
@@ -101,4 +98,3 @@ function clearLocalStorage() {
     unhide_elem('options');
     localStorage.clear();
 }
-console.log();

@@ -9,9 +9,9 @@ window.onload = function () {
     const mainSetting = document.getElementById('main-setting');
     const firstExpansion = document.getElementById('first-expansion');
     const secondExpansion = document.getElementById('second-expansion');
-    mainSetting.value = (_a = localStorage.getItem('mainSetting')) !== null && _a !== void 0 ? _a : '';
-    firstExpansion.value = (_b = localStorage.getItem('firstExpansion')) !== null && _b !== void 0 ? _b : '';
-    secondExpansion.value = (_c = localStorage.getItem('secondExpansion')) !== null && _c !== void 0 ? _c : '';
+    mainSetting.value = (_a = localStorage.getItem('mainSetting')) !== null && _a !== void 0 ? _a : 'classic';
+    firstExpansion.value = (_b = localStorage.getItem('firstExpansion')) !== null && _b !== void 0 ? _b : 'none';
+    secondExpansion.value = (_c = localStorage.getItem('secondExpansion')) !== null && _c !== void 0 ? _c : 'none';
     const currentDiceList = ((_d = localStorage.getItem('currentDiceList')) !== null && _d !== void 0 ? _d : '').split(',');
     const maxRounds = (_e = Number(localStorage.getItem('maxRounds'))) !== null && _e !== void 0 ? _e : 0;
     const rowLength = (_f = Number(localStorage.getItem('rowLength'))) !== null && _f !== void 0 ? _f : 0;
@@ -30,14 +30,5 @@ function saveProgress() {
     }
     if (secondExpansion) {
         localStorage.setItem('mainSetting', secondExpansion.value);
-    }
-    if (currentDiceList) {
-        localStorage.setItem('currentDiceList', currentDiceList.join(','));
-    }
-    if (maxRounds) {
-        localStorage.setItem('maxRounds', String(maxRounds));
-    }
-    if (rowLength) {
-        localStorage.setItem('rowLength', String(rowLength));
     }
 }

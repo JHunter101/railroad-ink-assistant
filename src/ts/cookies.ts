@@ -1,7 +1,3 @@
-declare const currentDiceList: string[];
-declare const maxRounds: number;
-declare const rowLength: number;
-
 window.onload = function (): void {
   const myCookies = localStorage.getItem('railroad-ink-assistant-pageHTML');
 
@@ -20,9 +16,9 @@ window.onload = function (): void {
     'second-expansion',
   ) as HTMLInputElement;
 
-  mainSetting.value = localStorage.getItem('mainSetting') ?? '';
-  firstExpansion.value = localStorage.getItem('firstExpansion') ?? '';
-  secondExpansion.value = localStorage.getItem('secondExpansion') ?? '';
+  mainSetting.value = localStorage.getItem('mainSetting') ?? 'classic';
+  firstExpansion.value = localStorage.getItem('firstExpansion') ?? 'none';
+  secondExpansion.value = localStorage.getItem('secondExpansion') ?? 'none';
 
   const currentDiceList = (localStorage.getItem('currentDiceList') ?? '').split(
     ',',
@@ -55,15 +51,5 @@ function saveProgress() {
   }
   if (secondExpansion) {
     localStorage.setItem('mainSetting', secondExpansion.value);
-  }
-
-  if (currentDiceList) {
-    localStorage.setItem('currentDiceList', currentDiceList.join(','));
-  }
-  if (maxRounds) {
-    localStorage.setItem('maxRounds', String(maxRounds));
-  }
-  if (rowLength) {
-    localStorage.setItem('rowLength', String(rowLength));
   }
 }

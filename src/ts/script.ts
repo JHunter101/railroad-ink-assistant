@@ -1,10 +1,3 @@
-import { dicePool, expansions } from './dice-data';
-declare let currentDiceList: string[];
-declare let maxRounds: number;
-declare let rowLength: number;
-
-console.log();
-
 function getDiceList(
   mainSetting: string,
   firstExpansion: string,
@@ -30,9 +23,9 @@ function getMaxRounds(
 }
 
 function setupGame(): {
-  currentDiceList: string[];
-  maxRounds: number;
-  rowLength: number;
+  myCurrentDiceList: string[];
+  myMaxRounds: number;
+  myRowLength: number;
 } {
   const mainSetting = document.getElementById(
     'main-setting',
@@ -44,33 +37,32 @@ function setupGame(): {
     'second-expansion',
   ) as HTMLInputElement;
 
-  const currentDiceList = getDiceList(
+  const myCurrentDiceList = getDiceList(
     mainSetting.value,
     firstExpansion.value,
     secondExpansion.value,
   );
 
-  const maxRounds = getMaxRounds(
+  const myMaxRounds = getMaxRounds(
     mainSetting.value,
     firstExpansion.value,
     secondExpansion.value,
   );
 
-  const rowLength = dicePool[mainSetting.value].dice.length;
+  const myRowLength = dicePool[mainSetting.value].dice.length;
 
-  return { currentDiceList, maxRounds, rowLength };
+  return { myCurrentDiceList, myMaxRounds, myRowLength };
 }
 
 function rollDice(): void {
   const rescon = document.getElementById('resCon') as HTMLInputElement;
   const currentRound = rescon.children.length + 1;
 
-  if (currentRound == 1) {
-    const _setupGame = setupGame();
-    currentDiceList = _setupGame.currentDiceList;
-    maxRounds = _setupGame.maxRounds;
-    rowLength = _setupGame.rowLength;
-  }
+  // TODO DON'T LOOP EVERY TIME
+  const myGameSetup = setupGame();
+  const currentDiceList = myGameSetup.myCurrentDiceList;
+  const maxRounds = myGameSetup.myMaxRounds;
+  const rowLength = myGameSetup.myRowLength;
 
   if (currentRound <= maxRounds) {
     const roundImg = createSquare(
@@ -101,7 +93,6 @@ function rollDice(): void {
         row.setAttribute('onclick', 'spoiler(this)');
         row.classList.add('disable-dbl-tap-zoom', 'blur', 'image-row');
         container.appendChild(row);
-        row.innerHTML = '';
       }
     }
 
@@ -173,5 +164,3 @@ function clearLocalStorage(): void {
   unhide_elem('options');
   localStorage.clear();
 }
-
-console.log();
