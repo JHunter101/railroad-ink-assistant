@@ -130,7 +130,6 @@ function createSquare(
 
 function unhide_elem(elem: string): void {
   const element = document.getElementById(elem);
-
   if (element) element.classList.remove('hidden');
 }
 
@@ -139,9 +138,8 @@ function hide_elem(elem: string): void {
   if (element) element.classList.add('hidden');
 }
 
-function spoiler(elem: string): void {
-  const element = document.getElementById(elem);
-  if (element) element.classList.toggle('blur');
+function spoiler(element: HTMLElement): void {
+  element.classList.toggle('blur');
 }
 
 function clearBox(elem: string): void {

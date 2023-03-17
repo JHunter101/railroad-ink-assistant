@@ -83,10 +83,8 @@ function hide_elem(elem) {
     if (element)
         element.classList.add('hidden');
 }
-function spoiler(elem) {
-    const element = document.getElementById(elem);
-    if (element)
-        element.classList.toggle('blur');
+function spoiler(element) {
+    element.classList.toggle('blur');
 }
 function clearBox(elem) {
     const mainSetting = (document.getElementById('main-setting').value = 'classic');
