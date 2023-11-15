@@ -326,8 +326,8 @@ function setupGoalsList({
     goalBox.classList.add('goal-box');
     const goalIMG = document.createElement('img');
 
-    goalIMG.height = 697;
-    goalIMG.width = 512; // Fixed the typo: height to width
+    goalIMG.height = 350;
+    goalIMG.width = 250; // Fixed the typo: height to width
     goalIMG.src = `res/images/cards/goals/${myGoalsList[i]}.jpg`;
 
     goalBox.appendChild(goalIMG);

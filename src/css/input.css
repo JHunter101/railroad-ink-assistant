@@ -185,7 +185,7 @@ h6 {
 
 /* Style the select elements within the options-container */
 .options-container select {
-  width: 35%;
+  width: 45%;
   text-align: center;
   padding: min(1.5vw, 0.5rem);
   border: 2px solid var(--accent-bg-color);
@@ -234,8 +234,9 @@ h6 {
 
 #game-goals {
   display: flex;
-  justify-content: space-evenly;
-  border: 1px solid var(--accent-bg-color); /* Adding a border for better visualization */
+  justify-content: center;
+  border-top: 1px solid var(--accent-bg-color);
+  border-bottom: 1px solid var(--accent-bg-color);
   margin: min(4vh, 1rem) 5%;
 }
 
