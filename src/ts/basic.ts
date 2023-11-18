@@ -1,3 +1,7 @@
+function spoiler(element: HTMLElement): void {
+  element.classList.toggle('blur');
+}
+
 function unhide_elem(elem: string): void {
   const element = document.getElementById(elem);
   if (element) element.classList.remove('hidden');
@@ -8,13 +12,24 @@ function hide_elem(elem: string): void {
   if (element) element.classList.add('hidden');
 }
 
-function spoiler(element: HTMLElement): void {
-  element.classList.toggle('blur');
+function clearBox(elem: string): void {
+  (document.getElementById(elem) as HTMLInputElement).innerHTML = '';
 }
 
-function clearBox(elem: string): void {
-  const versionSetting = ((
-    document.getElementById('version-setting') as HTMLInputElement
+function restart(): void {
+  clearBox('resCon');
+  clearBox('game-goals');
+  hide_elem('results');
+  hide_elem('game-goals');
+  unhide_elem('main-menu');
+  localStorage.clear();
+}
+
+function clearLocalStorage(): void {
+  restart();
+
+  const rulesSetting = ((
+    document.getElementById('rules-setting') as HTMLInputElement
   ).value = 'vanilla');
 
   const mainSetting = ((
@@ -36,15 +51,6 @@ function clearBox(elem: string): void {
   const secondExpansion = ((
     document.getElementById('second-expansion') as HTMLInputElement
   ).value = 'none');
-
-  (document.getElementById(elem) as HTMLInputElement).innerHTML = '';
-}
-
-function clearLocalStorage(): void {
-  hide_elem('results');
-  hide_elem('game-goals');
-  unhide_elem('main-menu');
-  localStorage.clear();
 }
 
 // Helpers

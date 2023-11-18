@@ -314,9 +314,9 @@ function setMaxRounds({ mainSetting, firstExpansion, secondExpansion, }) {
 }
 // MAIN
 function resetGameSettings() {
-    clearLocalStorage();
     return {
         newGame: true,
+        rulesSetting: '',
         mainSetting: '',
         goalSetting: '',
         blueprintSetting: '',
@@ -332,6 +332,7 @@ function resetGameSettings() {
 function setupGame() {
     const gameSettings = resetGameSettings();
     gameSettings.newGame = false;
+    gameSettings.rulesSetting = getInputElementValue('rules-setting');
     gameSettings.mainSetting = getInputElementValue('main-setting');
     gameSettings.goalSetting = getInputElementValue('goals-setting');
     gameSettings.blueprintSetting = getInputElementValue('blueprint-setting');

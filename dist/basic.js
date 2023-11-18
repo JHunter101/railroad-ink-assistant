@@ -1,4 +1,7 @@
 "use strict";
+function spoiler(element) {
+    element.classList.toggle('blur');
+}
 function unhide_elem(elem) {
     const element = document.getElementById(elem);
     if (element)
@@ -9,23 +12,25 @@ function hide_elem(elem) {
     if (element)
         element.classList.add('hidden');
 }
-function spoiler(element) {
-    element.classList.toggle('blur');
-}
 function clearBox(elem) {
-    const versionSetting = (document.getElementById('version-setting').value = 'vanilla');
+    document.getElementById(elem).innerHTML = '';
+}
+function restart() {
+    clearBox('resCon');
+    clearBox('game-goals');
+    hide_elem('results');
+    hide_elem('game-goals');
+    unhide_elem('main-menu');
+    localStorage.clear();
+}
+function clearLocalStorage() {
+    restart();
+    const rulesSetting = (document.getElementById('rules-setting').value = 'vanilla');
     const mainSetting = (document.getElementById('main-setting').value = 'classic');
     const goalsSetting = (document.getElementById('goals-setting').value = 'disabled');
     const blueprintSetting = (document.getElementById('blueprint-setting').value = 'disabled');
     const firstExpansion = (document.getElementById('first-expansion').value = 'none');
     const secondExpansion = (document.getElementById('second-expansion').value = 'none');
-    document.getElementById(elem).innerHTML = '';
-}
-function clearLocalStorage() {
-    hide_elem('results');
-    hide_elem('game-goals');
-    unhide_elem('main-menu');
-    localStorage.clear();
 }
 // Helpers
 function getInputElementValue(id) {

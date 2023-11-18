@@ -8,6 +8,7 @@ type gameResDataType = {
 
 type GameSettings = {
   newGame: boolean;
+  rulesSetting: string;
   mainSetting: string;
   goalSetting: string;
   blueprintSetting: string;
@@ -380,9 +381,9 @@ function setMaxRounds({
 // MAIN
 
 function resetGameSettings(): GameSettings {
-  clearLocalStorage();
   return {
     newGame: true,
+    rulesSetting: '',
     mainSetting: '',
     goalSetting: '',
     blueprintSetting: '',
@@ -399,6 +400,7 @@ function resetGameSettings(): GameSettings {
 function setupGame(): GameSettings {
   const gameSettings = resetGameSettings();
   gameSettings.newGame = false;
+  gameSettings.rulesSetting = getInputElementValue('rules-setting');
   gameSettings.mainSetting = getInputElementValue('main-setting');
   gameSettings.goalSetting = getInputElementValue('goals-setting');
   gameSettings.blueprintSetting = getInputElementValue('blueprint-setting');

@@ -13,3 +13,4 @@ function saveProgress() {
     document.documentElement.innerHTML,
   );
 }
+
