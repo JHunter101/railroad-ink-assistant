@@ -729,7 +729,7 @@ h6 {
   text-align: center;
   padding: min(1.5vw, 0.5rem);
   border: 2px solid var(--accent-bg-color);
-  margin: 0 min(1.5vw, 0.5rem);
+  margin: min(1.5vw, 0.5rem);
   font-size: min(3vw, 1rem);
 }
 
