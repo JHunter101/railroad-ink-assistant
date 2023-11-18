@@ -11,6 +11,7 @@ function rollDice() {
     const rescon = document.getElementById('resCon');
     const currentRound = rescon.children.length + 1;
     const { diceList, maxRounds, rowLength } = gameSettings;
+    console.log(gameSettings);
     // Roll
     if (currentRound <= maxRounds) {
         // Round

@@ -8,7 +8,5 @@ window.onload = function () {
 };
 // function to save data to local storage
 function saveProgress() {
-    const gameSettings = JSON.parse(localStorage.getItem('gameSettings') || 'null') || setupGame();
-    localStorage.setItem('gameSettings', JSON.stringify(gameSettings));
     localStorage.setItem('railroad-ink-assistant-pageHTML', document.documentElement.innerHTML);
 }

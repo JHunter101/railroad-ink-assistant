@@ -13,6 +13,8 @@ function rollDice(): void {
   const currentRound = rescon.children.length + 1;
   const { diceList, maxRounds, rowLength } = gameSettings;
 
+  console.log(gameSettings);
+
   // Roll
   if (currentRound <= maxRounds) {
     // Round
