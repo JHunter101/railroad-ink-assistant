@@ -8,7 +8,7 @@ window.onload = function (): void {
 
   const form = document.getElementById('main-menu-settings-form');
   if (form !== null) {
-    form.addEventListener('change', function (event) {
+    form.addEventListener('change', function () {
       saveProgress();
     });
   }

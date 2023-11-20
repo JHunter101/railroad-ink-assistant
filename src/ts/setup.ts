@@ -341,8 +341,6 @@ function setupGoalsList({
 
 function setupBlueprint({
   mainSetting,
-  firstExpansion,
-  secondExpansion,
   blueprintSetting,
 }: GameSettings): string {
   const blueprints = baseGameResData[mainSetting]?.blueprints;
@@ -359,8 +357,6 @@ function setupBlueprint({
 
 function setRowLength({
   mainSetting,
-  firstExpansion,
-  secondExpansion,
 }: GameSettings): number {
   return baseGameResData[mainSetting].dice.length;
 }

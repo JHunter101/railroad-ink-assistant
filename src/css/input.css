@@ -16,7 +16,7 @@ html * {
   font-size: 16px;
 }
 
-body {
+html body {
   display: block;
   margin: 0px;
   height: 100vh;
@@ -41,13 +41,13 @@ body {
   height: min(16vh, 4rem);
 }
 
-.h-screen {
+html .h-screen {
   height: clamp(100dvh, 100dvh, 250vh);
 }
 
 /* General Section */
 
-.hidden {
+html .hidden {
   display: none !important;
 }
 
@@ -227,7 +227,7 @@ h6 {
   height: auto;
   margin: 0.5em;
 }
-.blur {
+html .blur {
   filter: brightness(4%) blur(0.5em);
   position: relative;
 }

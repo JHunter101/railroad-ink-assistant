@@ -291,7 +291,7 @@ function setupGoalsList({ mainSetting, firstExpansion, secondExpansion, goalSett
     unhide_elem('game-goals');
     return myGoalsList;
 }
-function setupBlueprint({ mainSetting, firstExpansion, secondExpansion, blueprintSetting, }) {
+function setupBlueprint({ mainSetting, blueprintSetting, }) {
     var _a;
     const blueprints = (_a = baseGameResData[mainSetting]) === null || _a === void 0 ? void 0 : _a.blueprints;
     if (blueprints && blueprints.length > 0) {
@@ -301,7 +301,7 @@ function setupBlueprint({ mainSetting, firstExpansion, secondExpansion, blueprin
     }
     return '';
 }
-function setRowLength({ mainSetting, firstExpansion, secondExpansion, }) {
+function setRowLength({ mainSetting, }) {
     return baseGameResData[mainSetting].dice.length;
 }
 function setMaxRounds({ mainSetting, firstExpansion, secondExpansion, }) {
