@@ -1,6 +1,16 @@
 function spoiler(element: HTMLElement): void {
   element.classList.toggle('blur');
 }
+function toggle_elem(elem: string): void {
+  const element = document.getElementById(elem);
+  if (element) {
+    if (element.classList.contains('hidden')) {
+      unhide_elem(elem); // If hidden, unhide the element
+    } else {
+      hide_elem(elem); // If visible, hide the element
+    }
+  }
+}
 
 function unhide_elem(elem: string): void {
   const element = document.getElementById(elem);
@@ -19,8 +29,12 @@ function clearBox(elem: string): void {
 function restart(): void {
   clearBox('resCon');
   clearBox('game-goals');
-  clearBox('rules');
+  clearBox('rule-container');
+  hide_elem('rules');
+  hide_elem('rule-container');
   unhide_elem('main-menu');
+  unhide_elem('results');
+  unhide_elem('game-goals');
   localStorage.clear();
 }
 

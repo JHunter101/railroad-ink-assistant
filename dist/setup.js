@@ -390,9 +390,10 @@ function setMaxRounds({ mainSetting, firstExpansion, secondExpansion, }) {
     return Math.floor(boardSize / effectiveDie);
 }
 function setupRules({ firstExpansion, secondExpansion }) {
-    const rulepage = document.getElementById('rules');
+    const rulepage = document.getElementById('rule-container');
     [firstExpansion, secondExpansion].forEach((element) => {
         if (element !== 'none') {
+            unhide_elem('rules');
             const rulebox = document.createElement('div');
             const rule = document.createElement('p');
             rule.innerHTML = rulesResData['expansions'][element];

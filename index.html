@@ -178,10 +178,21 @@
         </div>
       </section>
       <section id="game-goals"></section>
+      <section id="rules" class="hidden">
+        <a
+          href="#buttons-top"
+          class="btn-black"
+          onclick=" 
+    toggle_elem('rule-container');
+    toggle_elem('results');
+    saveProgress();"
+          >Reveal Rules
+        </a>
+        <div id="rule-container" class="hidden"></div>
+      </section>
       <section id="results">
         <div id="resCon" class="wow fadeIn"></div>
       </section>
-      <section id="rules"></section>
     </div>
   </body>
 </html>

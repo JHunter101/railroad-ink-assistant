@@ -493,10 +493,11 @@ function setMaxRounds({
 }
 
 function setupRules({ firstExpansion, secondExpansion }: GameSettings) {
-  const rulepage = document.getElementById('rules') as HTMLDivElement;
+  const rulepage = document.getElementById('rule-container') as HTMLDivElement;
 
   [firstExpansion, secondExpansion].forEach((element) => {
     if (element !== 'none') {
+      unhide_elem('rules');
       const rulebox = document.createElement('div');
       const rule = document.createElement('p');
       rule.innerHTML = rulesResData['expansions'][element];

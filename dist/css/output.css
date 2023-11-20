@@ -513,6 +513,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .flex {
   display: flex;
 }
@@ -565,7 +569,7 @@ html body {
 
 .section-container {
   margin: auto;
-  padding: 2% 10%;
+  padding: 2vh 5vw;
 }
 
 @media (min-width: 1200px) {
@@ -739,16 +743,18 @@ h6 {
   touch-action: manipulation;
 }
 
+#results #rule-container {
+  position: relative;
+  overflow: auto;
+}
+
 #results,
 #rules {
-  overflow: auto;
-  position: relative;
-  margin: min(4vh, 1rem) 5%;
+  padding: min(4vh, 1rem) 5%;
 }
 
 #rules p {
   text-align: justify;
-  font-size: min(1.5vw, 0.5rem);
 }
 
 #resCon {
@@ -802,14 +808,13 @@ html .blur {
 /*-------------------------------------------------------------- # Buttons Section --------------------------------------------------------------*/
 
 #buttons-top,
-#buttons-bot,
-#main-menu {
+#buttons-bot {
   padding: 4vh 5vw;
 }
 
 .btn-black {
   background-color: var(--main-bg-color);
-  padding: min(3vw, 1rem) min(4.5vw, 1.5rem);
+  padding: min(1.5vw, 0.5rem) min(4.5vw, 1.5rem);
   margin: min(3vw, 1rem);
   border: 2px solid var(--accent-bg-color);
   font-size: min(3vw, 1rem);
