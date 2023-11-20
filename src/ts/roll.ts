@@ -29,7 +29,7 @@ function rollDice(): void {
     for (let i = 0; i < diceList.length; i++) {
       const roll = randItem(['1', '2', '3', '4', '5', '6']);
       const dieIMG = document.createElement('img');
-      dieIMG.height = dieIMG.width = 200;
+      dieIMG.height = dieIMG.width = 150;
       dieIMG.src = `res/images/dice/${diceList[i]}${roll}.png`;
       diceRow.appendChild(dieIMG);
 
