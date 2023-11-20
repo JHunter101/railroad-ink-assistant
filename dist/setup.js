@@ -435,7 +435,7 @@ const expansionsGameResData = {
     },
     canyon: {
         dice: ['yellow_canyonA_', 'yellow_canyonA_'],
-        goals: [],
+        goals: ['yellow_canyonA', 'yellow_canyonB', 'yellow_canyonC'],
         effective_dice: 0.5,
     },
     'city-builder': {
