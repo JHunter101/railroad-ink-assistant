@@ -19,8 +19,7 @@ function clearBox(elem: string): void {
 function restart(): void {
   clearBox('resCon');
   clearBox('game-goals');
-  hide_elem('results');
-  hide_elem('game-goals');
+  clearBox('rules');
   unhide_elem('main-menu');
   localStorage.clear();
 }

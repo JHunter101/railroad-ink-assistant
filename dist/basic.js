@@ -18,8 +18,7 @@ function clearBox(elem) {
 function restart() {
     clearBox('resCon');
     clearBox('game-goals');
-    hide_elem('results');
-    hide_elem('game-goals');
+    clearBox('rules');
     unhide_elem('main-menu');
     localStorage.clear();
 }

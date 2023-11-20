@@ -171,10 +171,6 @@ h6 {
 
 /*-------------------------------------------------------------- # Main Menu Section --------------------------------------------------------------*/
 
-#main-menu {
-  padding-bottom: 10vh;
-}
-
 /* Style the labels within the options-container */
 .options-container label {
   display: block;
@@ -185,7 +181,7 @@ h6 {
 
 /* Style the select elements within the options-container */
 .options-container select {
-  width: 45%;
+  width: 42%;
   text-align: center;
   padding: min(1.5vw, 0.5rem);
   border: 2px solid var(--accent-bg-color);
@@ -198,11 +194,16 @@ h6 {
   touch-action: manipulation;
 }
 
-#results {
+#results,
+#rules {
   overflow: auto;
   position: relative;
   margin: min(4vh, 1rem) 5%;
-  margin-bottom: 0;
+}
+
+#rules p {
+  text-align: justify;
+  font-size: min(1.5vw, 0.5rem);
 }
 
 #resCon {
@@ -237,20 +238,23 @@ html .blur {
   justify-content: center;
   border-top: 1px solid var(--accent-bg-color);
   border-bottom: 1px solid var(--accent-bg-color);
-  margin: min(4vh, 1rem) 5%;
+  margin: 0 5%;
 }
 
 #game-goals .goal-box {
   padding: min(3vw, 1rem);
 }
 
-#game-goals .goal-box:active {
-  transform: scale(2.5);
+#game-goals .goal-box p {
+  max-width: 250px;
+  font-size: min(1.5vw, 0.5rem);
+  text-align: justify;
 }
 
 /*-------------------------------------------------------------- # Buttons Section --------------------------------------------------------------*/
 #buttons-top,
-#buttons-bot {
+#buttons-bot,
+#main-menu {
   padding: 4vh 5vw;
 }
 
