@@ -188,7 +188,7 @@ const rulesResData: { [key: string]: { [key: string]: string } } = {
       '<p>At the beginning of the round, you can mark an available Special Route on your Board to ignore the Meteor dice this round (it counts as using a Special Route). At any point during the round, you can erase a Crater to draw a new Route in its place.</p>' +
       '<p>At the end of the game, you gain 2 points for each Route that has an open end connected to a Crater (these open ends don’t count as Errors either, of course).</p>',
     'pluck-man':
-      '<h1>Meteor Expansion:</h3>' +
+      '<h1>Pluc-Man Expansion:</h3>' +
       `
       <p>Draw Pluck-Man, Ghosts, and Fruits next to your unused Exits. At the end of the game, the more Ghosts you connected to Pluck-Man, the more bonus points you will score... as long as a Fruit is also connected to that same network to feed Pluck-Man with the energy needed to catch all those pesky Ghosts!</p>
       <p>When you draw Routes, you must draw the result of the Pluck-Man die next to one of your “unused” Exits, i.e., an Exit that has nothing connected to it. If you have no unused Exits available, you cannot draw the Pluck-Man die for that round.</p>
@@ -262,7 +262,7 @@ const rulesResData: { [key: string]: { [key: string]: string } } = {
     `,
 
     'street-lamps':
-      '<h1>street Expansion:</h3>' +
+      '<h1>street lamps Expansion:</h3>' +
       `
       <p>Shine a spotlight on your Longest Highways with the Street Lamps Expansion. Draw additional Highways accompanied by Street Lamps, but remember that you also have to turn them on to gain bonus points.</p>
       <p>With the addition of two dice containing only Highways, you will reach unprecedented Longest Highways, and you will also gain points for your activated lights.</p>
