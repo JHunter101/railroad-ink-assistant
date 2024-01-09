@@ -728,7 +728,8 @@ h6 {
 
 /* Style the select elements within the options-container */
 
-.options-container select {
+.options-container select,
+.options-container input {
   width: 42%;
   text-align: center;
   padding: min(1.5vw, 0.5rem);

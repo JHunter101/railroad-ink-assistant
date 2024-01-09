@@ -19,6 +19,7 @@ type GameSettings = {
   blueprint: string;
   rowLength: number;
   maxRounds: number;
+  seed: number | string;
 };
 
 const rulesResData: { [key: string]: { [key: string]: string } } = {
@@ -791,6 +792,7 @@ function resetGameSettings(): GameSettings {
     blueprint: '',
     rowLength: 0,
     maxRounds: 0,
+    seed: '',
   };
 }
 
@@ -808,6 +810,8 @@ function setupGame(): GameSettings {
   gameSettings.blueprint = setupBlueprint(gameSettings);
   gameSettings.rowLength = setRowLength(gameSettings);
   gameSettings.maxRounds = setMaxRounds(gameSettings);
+  gameSettings.seed = calculateSeed(getInputElementValue('game-seed'));
+
   setupRules(gameSettings);
   // Convert gameSettings to a JSON string and store in local storage
   localStorage.setItem('gameSettings', JSON.stringify(gameSettings));

@@ -64,6 +64,10 @@ function clearLocalStorage(): void {
   const secondExpansion = ((
     document.getElementById('second-expansion') as HTMLInputElement
   ).value = 'none');
+
+  const gameSeed = ((
+    document.getElementById('game-seed') as HTMLInputElement
+  ).value = '');
 }
 
 // Helpers
@@ -99,5 +103,40 @@ function randItem(myList: string[]): string {
   if (myList.length === 0) {
     return '';
   }
-  return myList[Math.floor(Math.random() * myList.length)];
+  const gameSettings: GameSettings =
+    JSON.parse(localStorage.getItem('gameSettings') || 'null') || setupGame();
+
+  let gameSeed = calculateSeed(gameSettings.seed);
+  let value = myList[Math.floor(seededRandom(gameSeed) * myList.length)];
+  gameSettings.seed = getNextSeed(gameSeed);
+  localStorage.setItem('gameSettings', JSON.stringify(gameSettings));
+
+  return value;
+}
+
+function calculateSeed(input: string | number): number {
+  if (typeof input === 'number') {
+    return input;
+  }
+
+  if (input === '') {
+    return Math.floor(Math.random() * Number.MAX_SAFE_INTEGER);
+  }
+
+  let seed = 0;
+  const strInput = input.toString();
+  for (let i = 0; i < strInput.length; i++) {
+    seed = (seed * 31 + strInput.charCodeAt(i)) & 0x7fffffff;
+  }
+  return seed;
+}
+
+function getNextSeed(seed: number): number {
+  seed = (seed * 1664525 + 1013904223) & 0x7fffffff;
+  return seed;
+}
+
+function seededRandom(seed: number): number {
+  const nextSeed = getNextSeed(seed);
+  return nextSeed / 0x7fffffff;
 }
