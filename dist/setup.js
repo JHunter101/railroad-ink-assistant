@@ -662,6 +662,8 @@ function resetGameSettings() {
 }
 function setupGame() {
     const gameSettings = resetGameSettings();
+    gameSettings.seed = calculateSeed(getInputElementValue('game-seed'));
+    localStorage.setItem('gameSettings', JSON.stringify(gameSettings));
     gameSettings.newGame = false;
     gameSettings.rulesSetting = getInputElementValue('rules-setting');
     gameSettings.mainSetting = getInputElementValue('main-setting');
@@ -674,7 +676,6 @@ function setupGame() {
     gameSettings.blueprint = setupBlueprint(gameSettings);
     gameSettings.rowLength = setRowLength(gameSettings);
     gameSettings.maxRounds = setMaxRounds(gameSettings);
-    gameSettings.seed = calculateSeed(getInputElementValue('game-seed'));
     setupRules(gameSettings);
     // Convert gameSettings to a JSON string and store in local storage
     localStorage.setItem('gameSettings', JSON.stringify(gameSettings));
