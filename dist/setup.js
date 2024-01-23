@@ -504,7 +504,7 @@ const expansionsGameResData = {
         effective_dice: 1,
     },
     renovation: {
-        dice: ['engineer_renovationA_', 'engineer_renovationA_'],
+        dice: ['engineer_renovationA_'],
         goals: [],
         effective_dice: 0.5,
     },

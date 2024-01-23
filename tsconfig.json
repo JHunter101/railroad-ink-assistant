@@ -19,5 +19,8 @@
     "outDir": "dist"
   },
   "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "dependencies": {
+    "JHunter101/fractal-api": "1.0.0"
+  }
 }

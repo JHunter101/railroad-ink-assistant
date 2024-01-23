@@ -1,0 +1,7 @@
+{
+  "name": "railroad-ink-assistant",
+  "version": "1.0.0",
+  "dependencies": {
+    "@jhunter101/fractal-api": "1.0.0"
+  }
+}
